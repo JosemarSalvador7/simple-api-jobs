@@ -7,4 +7,14 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+*.venv
+
+# databases
+*.db
+*.sqlite3
+
+# .vscode
+
+# ruff 
+
+.ruff_cache

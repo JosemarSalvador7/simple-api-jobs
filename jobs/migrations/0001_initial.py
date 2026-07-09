@@ -4,22 +4,32 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
-        ('skills', '0001_initial'),
+        ("skills", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Job',
+            name="Job",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255)),
-                ('description', models.TextField()),
-                ('salary', models.DecimalField(decimal_places=2, max_digits=12)),
-                ('skills', models.ManyToManyField(related_name='jobs', to='skills.skill')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=255)),
+                ("description", models.TextField()),
+                ("salary", models.DecimalField(decimal_places=2, max_digits=12)),
+                (
+                    "skills",
+                    models.ManyToManyField(related_name="jobs", to="skills.skill"),
+                ),
             ],
         ),
     ]
