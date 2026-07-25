@@ -3,8 +3,6 @@ from skills.models import Skill
 from skills.serializers import SkillSerializer
 
 # FAZ O MESMO QUE ESSE
-
-
 class SkillView(ModelViewSet):
     queryset = Skill.objects.all()
     serializer_class = SkillSerializer
